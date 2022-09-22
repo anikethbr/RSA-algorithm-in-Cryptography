@@ -26,13 +26,21 @@
                     <input type="text" class="form-control" id="plainText" autofocus  >
                     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                 </div>
-                <button type="button" class="btn-submit" onclick="rsa()">Submit</button>
+                <button type="button" class="btn-submit" onclick="rsa()">Encrypt</button>
             </form>
         </div>
     </section>
     <div class="text">
-        <p class="p1"></p>
         <p class="p2"></p>
+        <div class="form-group form-item">
+            <label for="cipherText">Enter</label>
+            <input type="text" class="form-control" id="cipherText" autofocus>
+            <input type="hidden" id="ct" value="">
+            <input type="hidden" id="d" value="">
+            <input type="hidden" id="n" value="">
+            <input type="hidden" id="msglen" value="">
+        </div>
+        <button type="button" class="btn-submit" onclick="decrypt()">Decrypt</button>
     </div>
     <script src="./js/script.js"></script>
 </body>
