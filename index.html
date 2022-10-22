@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encrypt</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-<body>
+  <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./video/c2d0efc910eecc7bb196927a43df684b.mp4" type="video/mp4">
+      </video>
     <section id="home">
-        <div>
-            <h1>RSA ALGORITHM</h1>
-        </div>
+      <div>
+        <h1>RSA ALGORITHM</h1>
+      </div>
     </section>
     <section id="form-content">
-        <div class="form-element">
-            <form action="#" method="post">
-                <div class="form-group form-item">
-                    <label for="plainText">Enter</label>
-                    <input type="text" class="form-control" id="plainText" autofocus  >
-                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                </div>
-                <button type="button" class="btn-submit" onclick="rsa()">Encrypt</button>
-            </form>
-        </div>
+      <div class="form-element">
+        <form action="#" method="post">
+          <div class="form-group form-item">
+            <label for="plainText">Enter</label>
+            <input type="text" class="form-control" id="plainText" autofocus />
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <button type="button" class="btn-submit" onclick="rsa()">
+            Encrypt
+          </button>
+        </form>
+      </div>
     </section>
     <div class="text">
-        <p class="p2"></p>
-        <div class="form-group form-item">
-            <label for="cipherText">Enter</label>
-            <input type="text" class="form-control" id="cipherText" autofocus>
-            <input type="hidden" id="ct" value="">
-            <input type="hidden" id="d" value="">
-            <input type="hidden" id="n" value="">
-            <input type="hidden" id="msglen" value="">
-        </div>
-        <button type="button" class="btn-submit" onclick="decrypt()">Decrypt</button>
+      <p class="p2"></p>
+      <div class="form-group form-item">
+        <label for="cipherText">Enter</label>
+        <input type="text" class="form-control" id="cipherText" autofocus />
+        <input type="hidden" id="ct" value="" />
+        <input type="hidden" id="d" value="" />
+        <input type="hidden" id="n" value="" />
+        <input type="hidden" id="msglen" value="" />
+      </div>
+      <button type="button" class="btn-submit" onclick="decrypt()">
+        Decrypt
+      </button>
     </div>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
